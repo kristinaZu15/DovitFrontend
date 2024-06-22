@@ -1,7 +1,7 @@
 <!-- Contenedor principal -->
 <div>
   <!-- Menú visible solo cuando el usuario NO está autenticado -->
-  <nav class="navigation" *ngIf="!isAuthenticated">
+  <nav class="navigation">
     <ul>
       <li><a routerLink="/login" routerLinkActive="active">Login</a></li>
       <li><a routerLink="/user" routerLinkActive="active">Perfil de Usuario</a></li>
@@ -10,8 +10,8 @@
   </nav>
 
   <!-- Menú de Donante, solo visible si el usuario está autenticado y es Donante -->
-  <div *ngIf="userType === 'Donante' && isAuthenticated">
-    <app-menu *ngIf="userType === 'Donante' && isAuthenticated" (onToggleMenuNav)="onToggleMenuNav($event)"></app-menu>
+  <div>
+    <app-menu (onToggleMenuNav)="onToggleMenuNav($event)"></app-menu>
   <app-body
         [collapsed]="isMenuNavCollapsed"
         [screenWidth]="screenWidth">
@@ -19,8 +19,8 @@
   </div>
 
   <!-- Menú de Organización, solo visible si el usuario está autenticado y es Organización -->
-  <div *ngIf="userType === 'Organizacion' && isAuthenticated">
-    <app-sidenav *ngIf="userType === 'Organizacion' && isAuthenticated" (onToggleMenuNav)="onToggleMenuNav($event)"></app-sidenav>
+  <div>
+    <app-sidenav (onToggleMenuNav)="onToggleMenuNav($event)"></app-sidenav>
   <app-structure
         [collapsed]="isMenuNavCollapsed"
         [screenWidth]="screenWidth">

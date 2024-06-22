@@ -2,17 +2,11 @@ import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { HomeComponent } from './donor/home/home.component';
 import { InicioComponent } from './organizations/inicio/inicio.component';
-import { LoginComponent } from './Auth/login/login.component';
-import { ListarComponent } from './Auth/listar/listar.component';
-import { UserComponent } from './Auth/user/user.component';
 import { segGuard } from './guard/seguridad.guard';
 import { SidenavComponent } from './organizations/sidenav/sidenav.component';
 import { MenuComponent } from './donor/menu/menu.component';
 
 const routes: Routes = [
-  { path: 'login', component: LoginComponent },
-  { path: 'user', component: UserComponent },
-  { path: 'listar', component: ListarComponent },
   { path: '', redirectTo: '/login', pathMatch: 'full' },
   
   // Rutas para Donante
