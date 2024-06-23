@@ -12,10 +12,6 @@
   <!-- Menú de Donante, solo visible si el usuario está autenticado y es Donante -->
   <div>
     <app-menu (onToggleMenuNav)="onToggleMenuNav($event)"></app-menu>
-  <app-body
-        [collapsed]="isMenuNavCollapsed"
-        [screenWidth]="screenWidth">
-  </app-body>
   </div>
 
   <!-- Menú de Organización, solo visible si el usuario está autenticado y es Organización -->

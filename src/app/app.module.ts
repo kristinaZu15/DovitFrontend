@@ -10,7 +10,6 @@ import { MenuComponent } from './donor/menu/menu.component';
 import { SidenavComponent } from './organizations/sidenav/sidenav.component';
 import { StructureComponent } from './organizations/structure/structure.component';
 import { SublevelSidenavComponent } from './organizations/sidenav/sublevel-sidenav.component';
-import { BodyComponent } from './donor/body/body.component';
 import { SublevelMenuComponent } from './donor/menu/sublevel-menu.component';
 import { AngularMaterialModule } from './shared/angular-material/angular-material.module';
 import { InicioComponent } from './organizations/inicio/inicio.component';
@@ -20,7 +19,6 @@ import { HttpClientModule} from '@angular/common/http';
   declarations: [
     AppComponent,
     MenuComponent,
-    BodyComponent,
     SublevelMenuComponent,
     HomeComponent,
     InicioComponent,

@@ -3,8 +3,6 @@ import { RouterModule, Routes } from '@angular/router';
 import { HomeComponent } from './donor/home/home.component';
 import { InicioComponent } from './organizations/inicio/inicio.component';
 import { segGuard } from './guard/seguridad.guard';
-import { SidenavComponent } from './organizations/sidenav/sidenav.component';
-import { MenuComponent } from './donor/menu/menu.component';
 
 const routes: Routes = [
   { path: '', redirectTo: '/login', pathMatch: 'full' },

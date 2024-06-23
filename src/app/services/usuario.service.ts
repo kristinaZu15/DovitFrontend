@@ -32,4 +32,19 @@ export class UsuarioService {
       })
     );
   }
+
+  // Método para eliminar un usuario
+  public eliminar(id: number): Observable<any> {
+    return this.http.delete(`${this.baseUrl}/Eliminar/${id}`);
+  }
+
+  // Emitir cambios en la lista de usuarios
+  public setList(newList: Usuario[]) {
+    this.listChange.next(newList);
+  }
+
+  // Observar cambios en la lista de usuarios
+  public getList(): Observable<Usuario[]> {
+    return this.listChange.asObservable();
+  }
 }
